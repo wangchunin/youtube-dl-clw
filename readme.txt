@@ -9,3 +9,5 @@ window.location.href="f1:"+url + "***" + exec_path;
 6、播放youtube视频时，点击Enhancer for YouTube™的自定义脚本按钮即可下载。
 #####################
 youtube-dl.exe可能会需要更新，下载最新放进去替换即可。
+http://www.youtube-dl.org/downloads/latest/youtube-dl.exe
+每次下载为最新版本
