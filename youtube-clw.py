@@ -75,10 +75,15 @@ def readInput(caption, default, timeout=3):
 
 
 print("开始时间："+GetNowTime())
+url = sys.argv[1]
+new_url_without_f1 = url.replace('f1:','',1)
+new_url = new_url_without_f1.split("***")[0]
+pwd_file = new_url_without_f1.split("***")[1]
+print("程序路径：" + pwd_file)
 
-with open("./config.json",'r') as load_f:
+with open(pwd_file+"\\config.json",'r') as load_f:
   load_dict = json.load(load_f)
-  print(load_dict)
+  print("json文件：" + load_dict)
 #load_dict['smallberg'] = [8200,{1:[['Python',81],['shirt',300]]}]
 
 
@@ -86,10 +91,8 @@ dl_path = load_dict['dl_path']
 proxy = load_dict['proxy']
 thread  = load_dict['thread']
 cache = load_dict['cache']
-pwd_file = load_dict["pwd_file"]
-#input()
-url = sys.argv[1]
-new_url = url.replace('f1:','',1)
+
+
 
 
 
@@ -106,7 +109,7 @@ else:
 path = os.getenv('PATH')
 
 os.environ['PATH']=path + ';' + pwd_file + "\\bin"
-print(os.getenv('PATH'))
+print("当前PATH：" + os.getenv('PATH'))
 pwd = os.getcwd()
 print("初始环境路径：" + pwd)
 os.system("mkdir " + dl_path)
@@ -123,10 +126,8 @@ print("osdir: " + new_pwd)
 
 cache_dir = dl_path + "\\temp"
 y= 'move {}  ' + dl_path
-print(y)
 x='--exec "{}"'.format(y)
 ar = "-x {}      -k {}M ".format(thread, cache)
-print(ar)
 #print (x)
 #command='{}  &&  aria2c -h'.format(commandpath)
 #command = 'youtube-dl --proxy "https://127.0.0.1:1080"      --write-sub --no-playlist --audio-quality 0   {} "{}"'.format(x,new_url)

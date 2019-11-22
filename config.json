@@ -1,5 +1,4 @@
 {
-    "pwd_file" : "E:\\pycharm\\youtube-dl-clw",
     "dl_path": "E:\\youtubedownload",
     "proxy": "http://127.0.0.1:1081",
     "thread": 4,
