@@ -83,7 +83,8 @@ print("程序路径：" + pwd_file)
 
 with open(pwd_file+"\\config.json",'r') as load_f:
   load_dict = json.load(load_f)
-  print("json文件：" + load_dict)
+  print("json文件：")
+  print(load_dict)
 #load_dict['smallberg'] = [8200,{1:[['Python',81],['shirt',300]]}]
 
 
