@@ -8,6 +8,8 @@ import time
 #import selenium
 import msvcrt
 import json
+import tkinter as tk
+from tkinter import filedialog
 #from selenium import webdriver
 #返回当前时间
 #函数部分
@@ -79,6 +81,8 @@ url = sys.argv[1]
 new_url_without_f1 = url.replace('f1:','',1)
 new_url = new_url_without_f1.split("***")[0]
 pwd_file = new_url_without_f1.split("***")[1]
+Folderpath = filedialog.askdirectory()
+print("下载路径：" + Folderpath)
 print("程序路径：" + pwd_file)
 
 with open(pwd_file+"\\config.json",'r') as load_f:
@@ -88,7 +92,7 @@ with open(pwd_file+"\\config.json",'r') as load_f:
 #load_dict['smallberg'] = [8200,{1:[['Python',81],['shirt',300]]}]
 
 
-dl_path = load_dict['dl_path']
+dl_path = Folderpath
 proxy = load_dict['proxy']
 thread  = load_dict['thread']
 cache = load_dict['cache']
