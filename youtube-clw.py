@@ -1,11 +1,8 @@
 #coding:utf-8
 import os
 import sys
-#import win32clipboard as w
-#import win32con
 import subprocess
 import time
-#import selenium
 import msvcrt
 import json
 import tkinter as tk
@@ -37,17 +34,6 @@ def check_str(value):
 
 
 
-def getText():
-    w.OpenClipboard()
-    d = w.GetClipboardData(win32con.CF_TEXT)
-    w.CloseClipboard()
-    return(d).decode('GBK')
-
-def setText(aString):
-    w.OpenClipboard()
-    w.EmptyClipboard()
-    w.SetClipboardData(win32con.CF_TEXT, aString)
-    w.CloseClipboard()
 
 
 
