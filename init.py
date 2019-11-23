@@ -34,3 +34,5 @@ try:
         print("F1.reg修改成功！")
 except:
     print("请在程序目录下运行该程序！")
+
+input("初始化完成，任意键退出！")
