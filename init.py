@@ -1,6 +1,8 @@
 import os
 
 pwd = os.getcwd()
+
+pwd = pwd.replace("\\", "\\\\")
 print("当前路径：" + pwd)
 try:
     with open('EnhancerforYouTube.txt', 'r') as f:
