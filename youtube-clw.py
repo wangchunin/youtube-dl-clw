@@ -10,8 +10,10 @@ import msvcrt
 import json
 import tkinter as tk
 from tkinter import filedialog
-#from selenium import webdriver
-#返回当前时间
+root = tk.Tk()
+root.withdraw() # 不显示tk窗口
+
+
 #函数部分
 def GetNowTime():
     return time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(time.time()))
@@ -80,8 +82,9 @@ print("开始时间："+GetNowTime())
 url = sys.argv[1]
 new_url_without_f1 = url.replace('f1:','',1)
 new_url = new_url_without_f1.split("***")[0]
-pwd_file = new_url_without_f1.split("***")[1]
-Folderpath = filedialog.askdirectory()
+pwd_file = new_url_without_f1.split("***")[1].replace(r"/", r"\\")
+Folderpath = filedialog.askdirectory(title=u'选择文件夹')
+Folderpath = Folderpath.replace(r"/", r"\\")
 print("下载路径：" + Folderpath)
 print("程序路径：" + pwd_file)
 
