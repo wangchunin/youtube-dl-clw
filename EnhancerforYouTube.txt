@@ -1,0 +1,3 @@
+var exec_path = "E:\pycharm\youtube-dl-clw";
+var url = window.location.href;
+window.location.href="f1:"+url + "***" + exec_path;
