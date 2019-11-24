@@ -69,7 +69,12 @@ try:
     new_url_without_f1 = url.replace('f1:','',1)
     new_url = new_url_without_f1
     pwd_file = os.path.split(sys.argv[0])[0].replace("/", "\\").replace("\\", "\\\\")
-    Folderpath = filedialog.askdirectory(title=u'选择文件夹')
+    while True:
+        Folderpath = filedialog.askdirectory(title=u'选择文件夹')
+        if len(Folderpath) != 0:
+            break
+        else:
+            print("请选择下载位置！")
     Folderpath = Folderpath.replace(r"/", r"\\")
     print("下载路径：" + Folderpath)
     print("程序路径：" + pwd_file)
