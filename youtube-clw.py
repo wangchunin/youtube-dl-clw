@@ -79,7 +79,7 @@ try:
     print("下载路径：" + Folderpath)
     print("程序路径：" + pwd_file)
 
-    with open(pwd_file+"\\config.json",'r') as load_f:
+    with open(os.path.join(pwd_file, "config.json"),'r') as load_f:
       load_dict = json.load(load_f)
       print("json文件：")
       print(load_dict)
