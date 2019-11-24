@@ -2,7 +2,7 @@ import requests
 import json
 import sys
 #下载地址
-pwd = sys.path[0].replace("\\", "\\\\")
+pwd = sys.argv[0].replace("\\", "\\\\")
 with open(pwd + "\\config.json",'r') as load_f:
   load_dict = json.load(load_f)
 

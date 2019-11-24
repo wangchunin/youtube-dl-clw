@@ -1,7 +1,7 @@
 import os
 import sys
 
-pwd = sys.path[0]
+pwd = sys.argv[0]
 print("当前路径：" + pwd)
 pwd = pwd.replace("\\", "\\\\")
 
@@ -22,5 +22,5 @@ except:
     print("请右键管理员运行次程序！")
 
 
-
-input("初始化完成，任意键退出！")
+else:
+    input("初始化完成，任意键退出！")
