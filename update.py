@@ -1,7 +1,9 @@
 import requests
 import json
+import sys
 #下载地址
-with open("config.json",'r') as load_f:
+pwd = sys.path[0].replace("\\", "\\\\")
+with open(pwd + "\\config.json",'r') as load_f:
   load_dict = json.load(load_f)
 
 
@@ -23,7 +25,7 @@ else:
     f=requests.get(Download_addres, proxies=proxies)
 print("正在下载，请耐心等待，如果config.json中配置了代理，会快一些！")
 #下载文件
-with open("bin/youtube-dl.exe","wb") as code:
+with open(pwd + "\\bin\\youtube-dl.exe","wb") as code:
      code.write(f.content)
 print("完成，任意键退出！")
 input()

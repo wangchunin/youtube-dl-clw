@@ -67,8 +67,9 @@ def readInput(caption, default, timeout=3):
 print("开始时间："+GetNowTime())
 url = sys.argv[1]
 new_url_without_f1 = url.replace('f1:','',1)
-new_url = new_url_without_f1.split("***")[0]
-pwd_file = new_url_without_f1.split("***")[1].replace(r"/", r"\\")
+new_url = new_url_without_f1
+pwd_file = sys.path[0].replace("\\", "\\\\")
+#pwd_file = sys.path[0]
 Folderpath = filedialog.askdirectory(title=u'选择文件夹')
 Folderpath = Folderpath.replace(r"/", r"\\")
 print("下载路径：" + Folderpath)
