@@ -187,5 +187,6 @@ try:
 
     input("Prease <enter> to end!")
 except Exception as e:
-    print("程序出错：")
     print(e)
+    input("程序出错：")
+
