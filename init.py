@@ -1,9 +1,11 @@
 import os
 import sys
 
-pwd = sys.argv[0]
-print("当前路径：" + pwd)
+pwd = os.path.split(os.path.realpath(__file__))[0]
+
+
 pwd = pwd.replace("\\", "\\\\")
+print("当前路径：" + pwd)
 
 try:
     with open(pwd + '\\F1.reg', 'r') as f:
@@ -19,7 +21,7 @@ try:
             f.write('%s' % line)
         print("F1.reg修改成功！")
 except:
-    print("请右键管理员运行次程序！")
+    input("请右键管理员运行次程序！")
 
 
 else:

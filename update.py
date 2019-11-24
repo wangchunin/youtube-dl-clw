@@ -1,8 +1,9 @@
 import requests
 import json
 import sys
+import os
 #下载地址
-pwd = sys.argv[0].replace("\\", "\\\\")
+pwd = pwd = os.path.split(os.path.realpath(__file__))[0].replace("\\", "\\\\")
 with open(pwd + "\\config.json",'r') as load_f:
   load_dict = json.load(load_f)
 
