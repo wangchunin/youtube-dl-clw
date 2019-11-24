@@ -2,7 +2,7 @@ import os
 import sys
 import subprocess
 
-
+#test
 pwd = os.path.split(sys.argv[0])[0].replace("/", "\\").replace("\\", "\\\\")
 
 
