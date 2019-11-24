@@ -1,10 +1,10 @@
 import os
 import sys
 
-pwd = os.path.split(os.path.realpath(__file__))[0]
+pwd = os.path.split(sys.argv[0])[0].replace("/", "\\").replace("\\", "\\\\")
 
 
-pwd = pwd.replace("\\", "\\\\")
+
 print("当前路径：" + pwd)
 
 try:
