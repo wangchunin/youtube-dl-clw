@@ -9,3 +9,4 @@ window.location.href="f1:"+url;
 6、播放youtube视频时，点击Enhancer for YouTube™的自定义脚本按钮即可下载。
 #####################
 遇到程序出错运行目录下update.exe程序试试。
+中途退出直接control+c，下次下载只要文件夹相同，会自动断点续传。
