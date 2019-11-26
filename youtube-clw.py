@@ -111,10 +111,9 @@ try:
     print("当前PATH：" + os.getenv('PATH'))
     pwd = os.getcwd()
     print("初始环境路径：" + pwd)
-    os.system("mkdir " + dl_path)
     os.system("mkdir " + dl_path + "\\temp")
 
-    os.chdir(dl_path + "\\temp")
+    os.chdir(dl_path)
     new_pwd = os.getcwd()
 
 
@@ -134,11 +133,11 @@ try:
     #command = 'youtube-dl --proxy localhost:1081   -f bestvideo+bestaudio   --write-sub --no-playlist --audio-quality 0     {} "{}"'.format(x,new_url)
     #print(getText())
     if len(proxy)==0:
-        command = 'youtube-dl --cache-dir {} -f bestvideo+bestaudio    --external-downloader aria2c --external-downloader-args "{}"    --write-sub --no-playlist --audio-quality 0  {} "{}"'.format(
-            cache_dir, ar, x, new_url)
+        command = 'youtube-dl --cache-dir {} -f bestvideo+bestaudio    --external-downloader aria2c --external-downloader-args "{}"    --write-sub --no-playlist --audio-quality 0  "{}"'.format(
+            cache_dir, ar, new_url)
     else:
-        command = 'youtube-dl --cache-dir {} --proxy {} -f bestvideo+bestaudio    --external-downloader aria2c --external-downloader-args "{}"    --write-sub --no-playlist --audio-quality 0  {} "{}"'.format(
-            cache_dir, proxy, ar, x, new_url)
+        command = 'youtube-dl --cache-dir {} --proxy {} -f bestvideo+bestaudio    --external-downloader aria2c --external-downloader-args "{}"    --write-sub --no-playlist --audio-quality 0  "{}"'.format(
+            cache_dir, proxy, ar, new_url)
     #command = 'youtube-dl --proxy localhost:1081 -f bestvideo+bestaudio    --external-downloader aria2c --external-downloader-args "{}"    --write-sub --no-playlist --audio-quality 0  {} "{}"'.format(ar,x,new_url)
     #command = 'youtube-dl --proxy "https://127.0.0.1:1080" -f bestvideo+bestaudio --write-sub --audio-quality 0  --exec "move {} C:\" https://www.youtube.com/watch?v=9aOjGSC0R-Q&list=RDMM9aOjGSC0R-Q&start_radio=1'
     #print (command)
